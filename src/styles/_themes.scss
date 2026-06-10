@@ -1,0 +1,66 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+:root {
+  --color-primary: #{$color-primary};
+  --color-primary-hover: #{color.adjust($color-primary, $lightness: -8%)};
+  --color-secondary: #{$color-secondary};
+  --color-accent: #{$color-accent};
+  --color-bg: #{$color-white};
+  --color-surface: #{$color-gray-50};
+  --color-surface-elevated: #{$color-white};
+  --color-text: #{$color-gray-800};
+  --color-text-muted: #{$color-gray-600};
+  --color-heading: #{$color-secondary};
+  --color-border: #{$color-gray-200};
+  --color-header-bg: rgba(250, 248, 255, 0.92);
+  --color-overlay: rgba(26, 11, 46, 0.65);
+  --color-input-bg: #{$color-white};
+  --color-input-border: #{$color-gray-300};
+  --shadow-color: rgba(26, 11, 46, 0.1);
+
+  // Footer — siempre fondo oscuro para buen contraste
+  --color-footer-bg: #{$color-secondary};
+  --color-footer-text: #{$color-gray-300};
+  --color-footer-heading: #{$color-white};
+  --color-footer-muted: #{$color-gray-400};
+  --color-footer-accent: #{$color-accent};
+  --color-footer-border: rgba(255, 255, 255, 0.12);
+  --color-footer-input-bg: rgba(255, 255, 255, 0.07);
+  --color-footer-input-border: rgba(255, 255, 255, 0.18);
+  --color-footer-input-text: #{$color-white};
+  --color-footer-label: #{$color-gray-200};
+  --color-footer-placeholder: #{$color-gray-500};
+}
+
+[data-theme='dark'] {
+  --color-primary: #{color.adjust($color-primary, $lightness: 8%)};
+  --color-primary-hover: #{color.adjust($color-primary, $lightness: 14%)};
+  --color-secondary: #{$color-gray-100};
+  --color-accent: #{$color-accent};
+  --color-bg: #{$color-secondary};
+  --color-surface: #{$color-gray-800};
+  --color-surface-elevated: #{$color-gray-700};
+  --color-text: #{$color-gray-200};
+  --color-text-muted: #{$color-gray-400};
+  --color-heading: #{$color-white};
+  --color-border: #{$color-gray-700};
+  --color-header-bg: rgba(26, 11, 46, 0.95);
+  --color-overlay: rgba(0, 0, 0, 0.75);
+  --color-input-bg: #{$color-gray-800};
+  --color-input-border: #{$color-gray-600};
+  --shadow-color: rgba(0, 0, 0, 0.35);
+
+  // Footer — mantiene fondo oscuro también en dark mode
+  --color-footer-bg: #{$color-gray-900};
+  --color-footer-text: #{$color-gray-300};
+  --color-footer-heading: #{$color-white};
+  --color-footer-muted: #{$color-gray-400};
+  --color-footer-accent: #{$color-accent};
+  --color-footer-border: rgba(255, 255, 255, 0.12);
+  --color-footer-input-bg: rgba(255, 255, 255, 0.07);
+  --color-footer-input-border: rgba(255, 255, 255, 0.18);
+  --color-footer-input-text: #{$color-white};
+  --color-footer-label: #{$color-gray-200};
+  --color-footer-placeholder: #{$color-gray-500};
+}

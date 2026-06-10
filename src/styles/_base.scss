@@ -1,0 +1,110 @@
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-normal;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+img,
+picture,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: var(--color-primary-hover);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: $border-radius-sm;
+  }
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  color: var(--color-heading);
+}
+
+h1 {
+  font-size: clamp($font-size-3xl, 5vw, $font-size-5xl);
+}
+
+h2 {
+  font-size: clamp($font-size-2xl, 4vw, $font-size-4xl);
+}
+
+h3 {
+  font-size: clamp($font-size-xl, 3vw, $font-size-2xl);
+}
+
+p {
+  color: var(--color-text-muted);
+}
+
+::selection {
+  background-color: rgba($color-primary, 0.2);
+  color: var(--color-heading);
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: $spacing-md;
+  z-index: 9999;
+  padding: $spacing-sm $spacing-md;
+  background: var(--color-primary);
+  color: $color-white;
+  border-radius: $border-radius-md;
+  font-weight: $font-weight-semibold;
+
+  &:focus {
+    top: $spacing-md;
+  }
+}
