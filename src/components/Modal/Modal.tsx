@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import type { Project } from '@/types';
 import { IconClose, IconExternalLink } from '@/components/icons/Icons';
+import { publicAsset } from '@/utils/assets';
 import './Modal.scss';
 
 export interface ModalProps {
@@ -63,7 +64,7 @@ export function Modal({ project, onClose }: ModalProps) {
 
         <div className="modal__image-wrapper">
           <img
-            src={project.image}
+            src={publicAsset(project.image)}
             alt={`Captura del proyecto ${project.title}`}
             className="modal__image"
             width={800}

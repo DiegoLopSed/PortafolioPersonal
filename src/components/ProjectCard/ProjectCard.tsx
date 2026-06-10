@@ -1,5 +1,6 @@
 import type { Project } from '@/types';
 import { IconExternalLink } from '@/components/icons/Icons';
+import { publicAsset } from '@/utils/assets';
 import './ProjectCard.scss';
 
 export interface ProjectCardProps {
@@ -23,7 +24,7 @@ export function ProjectCard({ project, onSelect }: ProjectCardProps) {
       >
         <div className="project-card__image-wrapper">
           <img
-            src={project.image}
+            src={publicAsset(project.image)}
             alt={`Captura del proyecto ${project.title}`}
             className="project-card__image"
             loading="lazy"

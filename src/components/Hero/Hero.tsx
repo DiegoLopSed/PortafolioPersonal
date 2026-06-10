@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { siteConfig } from '@/data/site';
+import { publicAsset } from '@/utils/assets';
 import { IconArrowRight, IconLocation } from '@/components/icons/Icons';
 import './Hero.scss';
 
@@ -50,7 +51,7 @@ export function Hero({ showCta = true, compact = false }: HeroProps) {
         <div className="hero__image-wrapper animate-fade-in-up">
           <div className="hero__image-ring">
             <img
-              src={siteConfig.profileImage}
+              src={publicAsset(siteConfig.profileImage)}
               alt={`Foto de perfil de ${siteConfig.name}`}
               className="hero__image"
               width={320}
