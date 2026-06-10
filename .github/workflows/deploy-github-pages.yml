@@ -33,9 +33,8 @@ jobs:
       - name: Build
         run: npm run build:pages
         env:
-          # Cambia "Portafolio" si tu repositorio tiene otro nombre.
-          # Para usuario.github.io usa: VITE_BASE_PATH=/
-          VITE_BASE_PATH: /PortafolioPersonal/
+          # Dominio propio (diegodevelop.com) → raíz del sitio
+          VITE_BASE_PATH: /
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

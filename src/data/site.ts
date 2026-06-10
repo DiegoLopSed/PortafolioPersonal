@@ -23,5 +23,5 @@ También tengo experiencia como docente y mentor en programación, lo que me ha 
   location: 'Heroica Puebla de Zaragoza, México',
   profileImage: '/images/profile.jpg',
   // Actualiza con tu dominio real al desplegar
-  siteUrl: 'https://diegolopez.dev',
+  siteUrl: 'https://diegodevelop.com',
 };
