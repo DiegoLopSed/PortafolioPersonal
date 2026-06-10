@@ -1,0 +1,110 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.project-card {
+  @include card-base;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__trigger {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: left;
+    width: 100%;
+
+    &:focus-visible {
+      @include focus-ring;
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 5 / 3;
+    background: var(--color-surface);
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform $transition-slow;
+  }
+
+  &__trigger:hover &__image {
+    transform: scale(1.05);
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba($color-primary, 0.85);
+    color: $color-white;
+    font-weight: $font-weight-semibold;
+    opacity: 0;
+    transition: opacity $transition-base;
+  }
+
+  &__trigger:hover &__overlay,
+  &__trigger:focus-visible &__overlay {
+    opacity: 1;
+  }
+
+  &__body {
+    padding: $spacing-lg;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+  }
+
+  &__title {
+    font-size: $font-size-lg;
+    color: var(--color-heading);
+  }
+
+  &__description {
+    font-size: $font-size-sm;
+    line-height: $line-height-relaxed;
+    flex: 1;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+    margin-top: $spacing-sm;
+  }
+
+  &__links {
+    display: flex;
+    border-top: 1px solid var(--color-border);
+  }
+
+  &__link {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-xs;
+    padding: $spacing-sm $spacing-md;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    color: var(--color-primary);
+    transition: background $transition-fast;
+
+    &:hover {
+      background: var(--color-surface);
+    }
+
+    &--live {
+      color: var(--color-accent);
+      border-right: 1px solid var(--color-border);
+    }
+  }
+}

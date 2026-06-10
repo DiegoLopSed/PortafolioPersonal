@@ -1,0 +1,82 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.skill-bar {
+  @include card-base;
+  padding: $spacing-lg;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing-sm;
+  }
+
+  &__identity {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    min-width: 0;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0;
+    border-radius: $border-radius-md;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    transition: border-color $transition-fast;
+
+    .skill-bar:hover & {
+      border-color: var(--color-primary);
+    }
+  }
+
+  &__name {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    color: var(--color-heading);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__percent {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: var(--color-primary);
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__track {
+    height: 8px;
+    border-radius: $border-radius-full;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+  }
+
+  &__fill {
+    height: 100%;
+    border-radius: $border-radius-full;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    width: 0;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &--animated {
+      box-shadow: 0 0 12px rgba($color-primary, 0.4);
+    }
+  }
+}

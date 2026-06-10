@@ -1,0 +1,45 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.contact-form {
+  &__honeypot {
+    @include visually-hidden;
+  }
+
+  &__row {
+    @include respond-to(md) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: $spacing-md;
+    }
+  }
+
+  &__success {
+    text-align: center;
+    padding: $spacing-xl;
+    background: rgba($color-primary, 0.08);
+    border-radius: $border-radius-lg;
+    border: 1px solid rgba($color-primary, 0.2);
+
+    h3 {
+      color: var(--color-primary);
+      margin-bottom: $spacing-sm;
+    }
+
+    p {
+      margin-bottom: $spacing-lg;
+    }
+  }
+
+  &__error {
+    color: var(--color-accent);
+    font-size: $font-size-sm;
+    margin-bottom: $spacing-md;
+  }
+
+  &--compact {
+    .btn {
+      width: 100%;
+    }
+  }
+}
