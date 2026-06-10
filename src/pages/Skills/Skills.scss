@@ -1,0 +1,82 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.skills {
+  &__category-block {
+    margin-bottom: $spacing-3xl;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__category-header {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    margin-bottom: $spacing-xl;
+    padding-bottom: $spacing-md;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  &__category-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: $border-radius-lg;
+    background: linear-gradient(135deg, rgba($color-primary, 0.15), rgba($color-accent, 0.1));
+    color: var(--color-primary);
+    flex-shrink: 0;
+  }
+
+  &__category-title {
+    font-size: $font-size-xl;
+    color: var(--color-heading);
+    flex: 1;
+  }
+
+  &__category-count {
+    font-size: $font-size-sm;
+    color: var(--color-text-muted);
+    font-weight: $font-weight-medium;
+    padding: $spacing-xs $spacing-md;
+    border-radius: $border-radius-full;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+
+    @media (max-width: #{$bp-sm - 1px}) {
+      display: none;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: $spacing-md;
+
+    @include respond-to(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__service-card {
+    @include card-base;
+    padding: $spacing-xl;
+
+    h3 {
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-sm;
+      color: var(--color-heading);
+    }
+
+    p {
+      font-size: $font-size-sm;
+      line-height: $line-height-relaxed;
+    }
+  }
+}

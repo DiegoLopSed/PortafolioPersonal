@@ -1,0 +1,15 @@
+@use '../../styles/variables' as *;
+
+.portfolio {
+  &__grid {
+    min-height: 200px;
+  }
+
+  &__empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: $font-size-lg;
+    padding: $spacing-3xl;
+    color: var(--color-text-muted);
+  }
+}

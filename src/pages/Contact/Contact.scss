@@ -1,0 +1,67 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.contact {
+  &__grid {
+    display: grid;
+    gap: $spacing-2xl;
+
+    @include respond-to(lg) {
+      grid-template-columns: 1fr 1.2fr;
+      align-items: start;
+    }
+  }
+
+  &__info {
+    h2 {
+      font-size: $font-size-xl;
+      margin-bottom: $spacing-lg;
+      color: var(--color-heading);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+
+    li {
+      display: flex;
+      gap: $spacing-md;
+      align-items: flex-start;
+      color: var(--color-primary);
+    }
+
+    strong {
+      display: block;
+      font-size: $font-size-sm;
+      color: var(--color-heading);
+      margin-bottom: 2px;
+    }
+
+    a,
+    span {
+      font-size: $font-size-sm;
+      color: var(--color-text-muted);
+    }
+
+    a:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &__form-wrapper {
+    @include card-base;
+    padding: $spacing-xl;
+
+    h2 {
+      font-size: $font-size-xl;
+      margin-bottom: $spacing-lg;
+      color: var(--color-heading);
+    }
+
+    &:hover {
+      transform: none;
+    }
+  }
+}

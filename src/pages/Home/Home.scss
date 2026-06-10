@@ -1,0 +1,36 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.home {
+  &__projects-grid {
+    @include respond-to(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__cta-center {
+    display: flex;
+    justify-content: center;
+    margin-top: $spacing-2xl;
+  }
+
+  &__services {
+    margin-bottom: $spacing-md;
+  }
+
+  &__service-card {
+    @include card-base;
+    padding: $spacing-xl;
+
+    h3 {
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-sm;
+      color: var(--color-heading);
+    }
+
+    p {
+      font-size: $font-size-sm;
+      line-height: $line-height-relaxed;
+    }
+  }
+}

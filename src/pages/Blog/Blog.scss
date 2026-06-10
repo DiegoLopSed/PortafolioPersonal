@@ -1,0 +1,54 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.blog {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+    max-width: 800px;
+    margin-inline: auto;
+  }
+
+  &__card {
+    @include card-base;
+    padding: $spacing-xl;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    font-size: $font-size-sm;
+    color: var(--color-text-muted);
+    margin-bottom: $spacing-sm;
+  }
+
+  &__title {
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-sm;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: $spacing-xs;
+      color: var(--color-heading);
+
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  &__excerpt {
+    font-size: $font-size-base;
+    line-height: $line-height-relaxed;
+    margin-bottom: $spacing-md;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+  }
+}

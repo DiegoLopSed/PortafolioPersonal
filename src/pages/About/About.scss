@@ -1,0 +1,78 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.about {
+  display: grid;
+  gap: $spacing-2xl;
+
+  @include respond-to(lg) {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+
+  &__content {
+    h2 {
+      margin-bottom: $spacing-lg;
+    }
+
+    p {
+      font-size: $font-size-lg;
+      line-height: $line-height-relaxed;
+      margin-bottom: $spacing-md;
+    }
+  }
+
+  &__info-card {
+    @include card-base;
+    padding: $spacing-xl;
+
+    h3 {
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-md;
+      color: var(--color-heading);
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-sm;
+      font-size: $font-size-sm;
+    }
+
+    strong {
+      color: var(--color-heading);
+    }
+  }
+
+  &__skills-title {
+    text-align: center;
+    margin-bottom: $spacing-2xl;
+  }
+
+  &__skills-grid {
+    display: grid;
+    gap: $spacing-xl;
+
+    @include respond-to(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__skill-group {
+    h3 {
+      font-size: $font-size-base;
+      margin-bottom: $spacing-md;
+      color: var(--color-primary);
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $spacing-xs;
+    }
+  }
+}
