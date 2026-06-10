@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="#0F1724"/>
+  <circle cx="200" cy="100" r="3" fill="#FFF" opacity="0.8"/>
+  <circle cx="80" cy="60" r="2" fill="#FFF" opacity="0.5"/>
+  <circle cx="320" cy="80" r="2" fill="#FFF" opacity="0.5"/>
+  <circle cx="150" cy="40" r="1.5" fill="#FFF" opacity="0.4"/>
+  <circle cx="280" cy="150" r="2" fill="#FFF" opacity="0.6"/>
+  <polygon points="200,140 170,200 230,200" fill="#0A74FF"/>
+  <rect x="185" y="120" width="30" height="25" fill="#FF6B6B"/>
+  <text x="200" y="225" text-anchor="middle" fill="#64748B" font-family="Inter, sans-serif" font-size="14" font-weight="600">Stellar Quest</text>
+</svg>

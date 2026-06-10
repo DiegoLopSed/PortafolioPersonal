@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="#0F1724"/>
+  <path d="M200 40 L260 80 L260 160 L200 200 L140 160 L140 80 Z" fill="none" stroke="#0A74FF" stroke-width="2"/>
+  <rect x="175" y="100" width="50" height="40" rx="4" fill="#0A74FF" opacity="0.3"/>
+  <circle cx="120" cy="60" r="20" fill="#FF6B6B" opacity="0.2"/>
+  <circle cx="300" cy="180" r="15" fill="#0A74FF" opacity="0.2"/>
+  <text x="200" y="225" text-anchor="middle" fill="#64748B" font-family="Inter, sans-serif" font-size="13" font-weight="600">AWS Infrastructure</text>
+</svg>

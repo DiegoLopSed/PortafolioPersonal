@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="#1A0B2E"/>
+  <rect x="40" y="30" width="320" height="180" rx="8" fill="#2D1F45" stroke="#7C3AED" stroke-width="2"/>
+  <rect x="60" y="50" width="280" height="140" rx="4" fill="#453560"/>
+  <circle cx="200" cy="110" r="30" fill="#7C3AED" opacity="0.6"/>
+  <polygon points="190,95 190,125 215,110" fill="#E879F9"/>
+  <rect x="60" y="200" width="60" height="6" rx="3" fill="#7C3AED"/>
+  <rect x="130" y="200" width="40" height="6" rx="3" fill="#9B8AB8"/>
+  <rect x="180" y="200" width="80" height="6" rx="3" fill="#9B8AB8"/>
+  <text x="200" y="228" text-anchor="middle" fill="#E879F9" font-family="Inter, sans-serif" font-size="12" font-weight="600">MediaScreen Hub</text>
+</svg>
