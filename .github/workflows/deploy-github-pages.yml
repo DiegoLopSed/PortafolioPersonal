@@ -33,9 +33,8 @@ jobs:
       - name: Build
         run: npm run build:pages
         env:
-          # Mientras diegodevelop.com no apunte a GitHub, usa la ruta del repo.
-          # Cuando el dominio propio esté activo, cambia a: VITE_BASE_PATH: /
-          VITE_BASE_PATH: /${{ github.event.repository.name }}/
+          # Dominio personalizado diegodevelop.com → raíz del sitio
+          VITE_BASE_PATH: /
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
